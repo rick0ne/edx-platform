@@ -9,8 +9,6 @@ Usage:
 decorator `django.utils.decorators.decorator_from_middleware(middleware_class)`
 
 """
-
-
 import logging
 import geoip2.database
 
@@ -31,7 +29,7 @@ class CountryMiddleware(MiddlewareMixin):
 
         Store country code in session.
         """
-        new_ip_address, _ = get_client_ip(request)
+        new_ip_address, _ = get_client_ip(request, request_header_order=['X_FORWARDED_FOR', 'HTTP_X_FORWARDED_FOR'])
         old_ip_address = request.session.get('ip_address', None)
 
         if not new_ip_address and old_ip_address:
