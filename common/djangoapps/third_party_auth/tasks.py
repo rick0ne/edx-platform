@@ -31,7 +31,6 @@ class MetadataParseError(Exception):
     pass
 
 
-@shared_task(name='third_party_auth.fetch_saml_metadata')
 @set_code_owner_attribute
 def fetch_saml_metadata():
     """
