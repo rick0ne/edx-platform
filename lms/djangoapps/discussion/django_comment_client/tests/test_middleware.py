@@ -1,4 +1,4 @@
-import json  # lint-amnesty, pylint: disable=missing-module-docstring
+import json  # lint-amnesty, pylint: disable=missing-module-docstring  # lint-amnesty, pylint: disable=missing-module-docstring
 
 import django.http
 from django.test import TestCase

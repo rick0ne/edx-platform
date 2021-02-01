@@ -1,4 +1,4 @@
-from django.core.management.base import BaseCommand, CommandError  # lint-amnesty, pylint: disable=missing-module-docstring
+from django.core.management.base import BaseCommand, CommandError  # lint-amnesty, pylint: disable=missing-module-docstring  # lint-amnesty, pylint: disable=missing-module-docstring
 from opaque_keys.edx.keys import CourseKey
 
 from lms.djangoapps.courseware.courses import get_course

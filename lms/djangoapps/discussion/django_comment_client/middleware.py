@@ -1,4 +1,4 @@
-import json  # lint-amnesty, pylint: disable=missing-module-docstring
+import json  # lint-amnesty, pylint: disable=missing-module-docstring  # lint-amnesty, pylint: disable=missing-module-docstring
 import logging
 
 from django.utils.deprecation import MiddlewareMixin
