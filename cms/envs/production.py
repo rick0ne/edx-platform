@@ -591,3 +591,5 @@ EXPLICIT_QUEUES = {
     'cms.djangoapps.contentstore.tasks.update_search_index': {
         'queue': UPDATE_SEARCH_INDEX_JOB_QUEUE},
 }
+
+SPLIT_STUDIO_HOME = ENV_TOKENS.get('SPLIT_STUDIO_HOME', SPLIT_STUDIO_HOME)
