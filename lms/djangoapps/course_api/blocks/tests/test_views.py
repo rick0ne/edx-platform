@@ -47,7 +47,7 @@ class TestBlocksView(SharedModuleStoreTestCase):
         )
 
     def setUp(self):
-        super(TestBlocksView, self).setUp()
+        super(TestBlocksView, self).setUp()  # lint-amnesty, pylint: disable=super-with-arguments
 
         # create and enroll user in the toy course
         self.user = UserFactory.create()
@@ -401,7 +401,7 @@ class TestBlocksInCourseView(TestBlocksView):  # pylint: disable=test-inherits-t
     """
 
     def setUp(self):
-        super(TestBlocksInCourseView, self).setUp()
+        super(TestBlocksInCourseView, self).setUp()  # lint-amnesty, pylint: disable=super-with-arguments
         self.url = reverse('blocks_in_course')
         self.query_params['course_id'] = str(self.course_key)
 
