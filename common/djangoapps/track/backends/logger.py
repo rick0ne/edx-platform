@@ -33,6 +33,7 @@ class LoggerBackend(BaseBackend):
         self.event_logger = logging.getLogger(name)
 
     def send(self, event):
+        print('023P456i89d09937392')
         try:
             event_str = json.dumps(event, cls=DateTimeJSONEncoder)
         except UnicodeDecodeError:
@@ -45,7 +46,8 @@ class LoggerBackend(BaseBackend):
         # higher level during the emittion of the event, or by
         # providing warnings when the events exceed certain size.
         event_str = event_str[:settings.TRACK_MAX_EVENT]
-
-        self.event_logger.info(event_str)
         
+        print("1123P456i89d09937392")
+        self.event_logger.info(event_str)
+        print("123P456i89d09937392")
         self.event_logger.info("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
