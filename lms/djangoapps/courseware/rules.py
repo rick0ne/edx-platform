@@ -69,7 +69,7 @@ class HasAccessRule(Rule):
         return Q(pk__in=[])
 
 
-class StaffAccessExperiment(laboratory.Experiment):
+class StaffAccessExperiment(laboratory.Experiment):  # lint-amnesty, pylint: disable=missing-class-docstring
     def compare(self, control, candidate):
         return bool(control.value) == candidate.value
 
@@ -160,7 +160,7 @@ class HasStaffAccessToContent(Rule):
         return query
 
 
-class HasRolesRule(Rule):
+class HasRolesRule(Rule):  # lint-amnesty, pylint: disable=abstract-method, missing-class-docstring
     def __init__(self, *roles):
         self.roles = roles
 

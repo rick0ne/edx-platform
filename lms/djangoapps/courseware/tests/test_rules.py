@@ -20,7 +20,7 @@ class PermissionTests(TestCase):
     Tests for permissions defined in courseware.rules
     """
     def setUp(self):
-        super(PermissionTests, self).setUp()
+        super(PermissionTests, self).setUp()  # lint-amnesty, pylint: disable=super-with-arguments
         self.user = UserFactory()
 
         self.course_id = CourseLocator('MITx', '000', 'Perm_course')
@@ -30,7 +30,7 @@ class PermissionTests(TestCase):
         CourseEnrollment.unenroll(self.user, self.course_id)
 
     def tearDown(self):
-        super(PermissionTests, self).tearDown()
+        super(PermissionTests, self).tearDown()  # lint-amnesty, pylint: disable=super-with-arguments
         self.user.delete()
 
     @ddt.data(
