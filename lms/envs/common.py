@@ -1142,6 +1142,12 @@ TRACKING_BACKENDS = {
         'OPTIONS': {
             'name': 'tracking'
         }
+    },
+    'logger2': {
+        'ENGINE': 'common.djangoapps.track.backends.logger2.LoggerBackend',
+        'OPTIONS': {
+            'name': 'tracking2'
+        }
     }
 }
 
@@ -1161,7 +1167,14 @@ EVENT_TRACKING_BACKENDS = {
                         'name': 'tracking',
                         'max_event_size': TRACK_MAX_EVENT,
                     }
-                }
+                },
+				'logger2': {
+					'ENGINE': 'common.djangoapps.track.backends.logger2.LoggerBackend',
+					'OPTIONS': {
+						'name': 'tracking2'
+                        'max_event_size': TRACK_MAX_EVENT,
+					}
+				}
             },
             'processors': [
                 {'ENGINE': 'common.djangoapps.track.shim.LegacyFieldMappingProcessor'},
