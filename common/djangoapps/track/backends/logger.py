@@ -47,3 +47,5 @@ class LoggerBackend(BaseBackend):
         event_str = event_str[:settings.TRACK_MAX_EVENT]
 
         self.event_logger.info(event_str)
+        
+        self.event_logger.info("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
