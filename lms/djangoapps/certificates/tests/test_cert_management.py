@@ -29,7 +29,7 @@ class CertificateManagementTest(ModuleStoreTestCase):
     command = 'resubmit_error_certificates'
 
     def setUp(self):
-        super(CertificateManagementTest, self).setUp()
+        super(CertificateManagementTest, self).setUp()  # lint-amnesty, pylint: disable=super-with-arguments
         self.user = UserFactory.create()
         self.courses = [
             CourseFactory.create()
@@ -160,7 +160,7 @@ class RegenerateCertificatesTest(CertificateManagementTest):
         """
         We just need one course here.
         """
-        super(RegenerateCertificatesTest, self).setUp()
+        super(RegenerateCertificatesTest, self).setUp()  # lint-amnesty, pylint: disable=super-with-arguments
         self.course = self.courses[0]
 
     @ddt.data(True, False)
@@ -229,7 +229,7 @@ class UngenerateCertificatesTest(CertificateManagementTest):
         """
         We just need one course here.
         """
-        super(UngenerateCertificatesTest, self).setUp()
+        super(UngenerateCertificatesTest, self).setUp()  # lint-amnesty, pylint: disable=super-with-arguments
         self.course = self.courses[0]
 
     @override_settings(CERT_QUEUE='test-queue')
